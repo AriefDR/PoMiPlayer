@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constrainLayoutMusicPlay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlayMusicActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutNowPlay"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#4B4451"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/nowPlay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:height="40dp"
+            android:text="Now Playing"
+            android:textAlignment="center"
+            android:textColor="#00BCD4"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayoutNowPlay">
+
+        <ImageView
+            android:id="@+id/gambarDetailAlbum"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            app:srcCompat="@drawable/playlist" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/judul_lagi_play"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Judul Lagu"
+        android:textAlignment="center"
+        android:textColor="#009688"
+        android:textSize="27dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
+
+    <TextView
+        android:id="@+id/nama_artis_play"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Nama Artis"
+        android:textAlignment="center"
+        android:textColor="#009688"
+        android:textSize="22dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/judul_lagi_play" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutDuration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nama_artis_play">
+
+        <TextView
+            android:id="@+id/text_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:text="1:32"
+            android:textAlignment="viewStart"
+            android:textColor="#009688"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/total_duration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:text="4:32"
+            android:textAlignment="viewEnd"
+            android:textColor="#009688"
+            android:textSize="18dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayoutDuration">
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/skip_prev"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_skip_prev" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="15dp"
+        android:clickable="true"
+        android:src="@drawable/ic_pause"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/skip_next"
+        app:layout_constraintStart_toEndOf="@+id/skip_prev" />
+
+    <ImageView
+        android:id="@+id/skip_next"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_skip_next" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
